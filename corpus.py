@@ -16,7 +16,7 @@ def get_class_id(file_name):
     学習データを作るときに使っています。
     '''
     dir_list = get_dir_list()
-    dir_name = next(filter(lambda x: x in file_name, dir_list), None)
+    dir_name = next(iter(filter(lambda x: x in file_name, dir_list)), None)
     if dir_name:
         return dir_list.index(dir_name)
     return None
